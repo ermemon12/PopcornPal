@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MovieBot</title>
+  <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #f0f2f5;
+      font-family: Arial, sans-serif;
+    }
+
+    df-messenger {
+      --df-messenger-bot-message: #e1f0ff;
+      --df-messenger-user-message: #d1ffd6;
+      --df-messenger-font-color: #000;
+      --df-messenger-chat-background-color: #ffffff;
+      --df-messenger-send-icon: #007bff;
+
+      width: 90%;
+      max-width: 400px;
+      height: 500px;
+
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    }
+
+    /* Hide floating icon */
+    df-messenger::part(chat-icon) {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <df-messenger
+       intent="WELCOME" 
+       chat-title="MovieBot"
+       agent-id="50476758-4eb3-4f06-b5f4-f8830a1287d7"
+       language-code="en">
+  </df-messenger>
+</body>
+</html>
